@@ -13,4 +13,4 @@ elif(last_dig == 0):
     str4 = str2
 else:
     str4 = str3
-print(f"Last digit of {number} is {last_dig} {str4}")
+print(f"Last digit of {number:d} is {last_dig:d} {str4}")
