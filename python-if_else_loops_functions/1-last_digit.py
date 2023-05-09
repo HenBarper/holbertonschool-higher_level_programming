@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-last_dig = number % 10
-str1 =  "and is greater than 5"
-str2 = "and is zero"
+last_dig = (abs(number) % 10)
+str1 = "and is greater than 5"
+str2 = "and is 0"
 str3 = "and is less than 6 but not 0"
 if(last_dig > 5):
     str4 = str1
