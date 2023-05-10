@@ -6,7 +6,7 @@ if(number < 0):
     last_dig *= -1
 str1 = "and is greater than 5"
 str2 = "and is 0"
-str3 = "and is less than 6 but not 0"
+str3 = "and is less than 6 and not 0"
 if(last_dig > 5):
     str4 = str1
 elif(last_dig == 0):
