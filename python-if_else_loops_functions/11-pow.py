@@ -2,4 +2,4 @@
 
 
 def pow(a, b):
-    return 
+    return a ** b
