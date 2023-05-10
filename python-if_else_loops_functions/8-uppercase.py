@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 def uppercase(str):
+    ascNum = 0
     strLength = len(str)
     for i in range(strLength):
-        if(ord(str[i]) >= 97 and ord(str[i]) <= 122):
-            str[i] = (ord(str[i]) -= 32)
+        ascNum = ord(str[i])
+        if(ascNum >= 97 and ascNum <= 122):
+            ascNum -= 32
+        print(f"{chr(ascNum)}".format(), end='')
+    print()
