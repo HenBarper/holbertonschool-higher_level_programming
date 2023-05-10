@@ -10,5 +10,5 @@ def print_last_digit(number):
     else:
         pass
     
-    print(lastDigit)
+    print(f"{lastDigit}".format())
     return lastDigit
