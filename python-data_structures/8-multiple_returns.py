@@ -2,5 +2,8 @@
 
 
 def multiple_returns(sentence):
-    nuple = (len(sentence), sentence[0])
+    if(sentence == ""):
+        nuple = (len(sentence), None)
+    else:
+        nuple = (len(sentence), sentence[0])
     return nuple
