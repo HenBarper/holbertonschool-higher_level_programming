@@ -67,3 +67,6 @@ class Square:
                 if self.__position[0] > 0:
                     print(" " * self.__position[0], end="")
                 print("#" * self.__size)
+
+
+my_square = Square(3, (1, -3))
