@@ -1,57 +1,38 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue May 19 14:21:54 2020
-@author: Robinson Montes
+Write a class Square that defines a square by: (based on 4-square.py)
+
+Private instance attribute: size:
+property def size(self): to retrieve it
+property setter def size(self, value): to set it:
+size must be an integer, otherwise raise a TypeError exception with a message
+if size is less than 0, raise a ValueError exception with a message
+Instantiation with optional size: def __init__(self, size=0):
+Public instance method: def area(self): that returns the current square area
+Public instance method: def my_print(self): that prints in stdout
+if size is equal to 0, print an empty line
+You are not allowed to import any module
 """
 
 
 class Square:
-    """Class Square that has attributes. Instantiation with size
-
-    Attributes:
-        size (int): The size of the square
-    """
+    """Class Square that has attributes. Instantiation with size"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """The __init__ method for Square class
-
-        Args:
-            size: (:obj: 'int', optional): A public instance size
-            position: (:obj: 'tuple', optional): A public instance position
-        """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Call the function to checking property
-
-        Returns:
-            The size of the square
-        """
         return self.__size
 
     @property
     def position(self):
-        """Call the function to checking property
-
-        Returns:
-            The tuple position
-        """
         return self.__position
 
     @size.setter
     def size(self, value):
-        """check errors and setter for size attribute
-
-        Args:
-            value: Value to checking errors
-
-        Raises:
-            TypeError: Exception if size is not an integer
-            ValueError: Exception if size is less than 0
-        """
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -61,14 +42,6 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """check errors and setter for size attribute
-
-        Args:
-            value: Value to checking errors
-
-        Raises:
-            TypeError: Exception if size is not an integer
-        """
         if type(value) is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(value[0]) is not int or value[0] < 0:
@@ -78,17 +51,9 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Calculates the area of the square
-
-        Returns:
-            The area of the square
-        """
         return self.__size ** 2
 
     def my_print(self):
-        """Print a square using # character
-        """
-
         if self.__size == 0:
             print()
         else:
