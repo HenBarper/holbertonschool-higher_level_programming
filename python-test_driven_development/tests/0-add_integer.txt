@@ -1,0 +1,47 @@
+'Test for 0-add_integer module'
+
+'Funtion to test:   add_integer()'
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+'1. positive int values'
+>>> add_integer(12, 12)
+24
+
+'2. negative int values'
+>>> add_integer(-5, -5)
+-10
+
+'3. mixed int values'
+>>> add_integer(10, -5)
+5
+
+'4. negative int values with negative answer'
+>>> add_integer(5, -10)
+-5
+
+'5. positive float values'
+>>> add_integer(1.2, 6.7)
+9
+
+'6. negative float values'
+>>> add_integer(-5.1, -5.9)
+-11
+
+'7. a is int b is string'
+>>> add_integer(5, "hello")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+'8. a is string, b is int'
+>>> add_integer("a", 9)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+'9. a and b empty'
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
