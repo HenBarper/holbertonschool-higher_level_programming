@@ -18,9 +18,9 @@ def add_integer(a, b=98):
         The result of the operation
     """
 
-    if type(a) not in [int, float]:
+    if a is None or type(a) not in [int, float] or a is not a or abs(a) > 1.7976931348623158e+308:
         raise TypeError("a must be an integer")
-    if type(b) not in [int, float]:
+    if b is None or type(b) not in [int, float] or b is not b or abs(b) > 1.7976931348623158e+308:
         raise TypeError("b must be an integer")
     a = int(a)
     b = int(b)
