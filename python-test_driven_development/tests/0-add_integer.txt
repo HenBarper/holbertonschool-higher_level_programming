@@ -22,11 +22,11 @@
 
 '5. positive float values'
 >>> add_integer(1.2, 6.7)
-9
+7
 
 '6. negative float values'
 >>> add_integer(-5.1, -5.9)
--11
+-10
 
 '7. a is int b is string'
 >>> add_integer(5, "hello")
