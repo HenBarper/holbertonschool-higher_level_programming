@@ -45,3 +45,9 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+'10. a empty'
+>>> add_integer(, 5)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
