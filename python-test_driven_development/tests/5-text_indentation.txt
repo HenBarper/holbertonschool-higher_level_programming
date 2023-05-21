@@ -1,0 +1,9 @@
+'Test for 5-test_indentation module'
+
+'Function to test:   text_indentation()'
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+'Normal string'
+>>> text_indentation("string")
+string
