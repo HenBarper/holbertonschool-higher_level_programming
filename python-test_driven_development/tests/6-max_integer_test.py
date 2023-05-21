@@ -33,3 +33,9 @@ class TestMaxInteger(unittest.TestCase):
         test_list = [1, 5, 99, -12, 55]
         self.assertEqual(max_integer(test_list), 99)
 
+
+    def test_only_negative_numbers(self):
+        """Only negative numbers"""
+        test_list = [-99, -12, -55, -2, -9]
+        self.assertEqual(max_integer(test_list), -2)
+
