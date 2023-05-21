@@ -19,10 +19,12 @@ def text_indentation(text):
     new_line = False
 
     for char in text:
-        if char != ' ' or new_line == False:
+        if char != ' ' or new_line is False:
             print(char, end='')
-        else:
             new_line = False
+        elif char != ' ':
+            new_line = False
+
         if char in ['.', '?', ':']:
             print()
             print()
