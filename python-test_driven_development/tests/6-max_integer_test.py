@@ -11,8 +11,25 @@ class TestMaxInteger(unittest.TestCase):
     without arguments
     """
     def test_max_integer(self):
-        """
-        list of positive integers
-        """
+        """list of positive integers"""
         test_list = [32, 5, 6, 12, 1, 17, 99]
         self.assertEqual(max_integer(test_list), 99)
+
+
+    def test_max_at_beginning(self):
+        """Positive ints with max at the [0]"""
+        test_list = [99, 1, 6, 2, 88, 33]
+        self.assertEqual(max_integer(test_list), 99)
+
+
+    def test_max_in_middle(self):
+        """Positive ints with max in middle"""
+        test_list = [5, 99, 1]
+        self.assertEqual(max_integer(test_list), 99)
+
+
+    def test_one_negative_number(self):
+        """Positive ints with one negative number"""
+        test_list = [1, 5, 99, -12, 55]
+        self.assertEqual(max_integer(test_list), 99)
+
