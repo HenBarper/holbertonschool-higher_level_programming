@@ -16,6 +16,8 @@ def text_indentation(text):
     Return:
         No return only print
     """
+    if type(text) is not str:
+        raise TypeError("text must be a string")
     new_line = False
 
     for char in text:

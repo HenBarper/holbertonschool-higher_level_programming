@@ -7,3 +7,9 @@
 'Normal string'
 >>> text_indentation("string")
 string
+
+'not string'
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
