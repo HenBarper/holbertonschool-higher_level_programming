@@ -31,14 +31,17 @@ def matrix_divided(matrix, div):
 
     new_matrix = [x[:] for x in matrix]
 
+    row_len = len(matrix[0])
     new_element = 0
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            if type(matrix[i][j]) not in [int, float]:
+    for row in range(len(matrix)):
+        if(len(row) != row_len):
+            raise TypeError("Each row of the matrix must have the same size")
+        for col in range(len(matrix[row])):
+            if type(matrix[row][col]) not in [int, float]:
                 raise TypeError("matrix must be a matrix (list of lists) \
                     of integers/floats")
             else:
-                new_element = (matrix[i][j]) / div
+                new_element = (matrix[row][col]) / div
                 new_element = round(new_element, 2)
-                new_matrix[i][j] = new_element
+                new_matrix[row][col] = new_element
     return new_matrix
