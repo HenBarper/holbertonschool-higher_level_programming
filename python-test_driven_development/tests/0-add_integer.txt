@@ -1,6 +1,6 @@
 'Test for 0-add_integer module'
 
-'Funtion to test:   add_integer()'
+'Function to test:   add_integer()'
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
