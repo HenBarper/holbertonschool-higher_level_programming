@@ -27,7 +27,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists)" +
-                        "of integers/floats")
+                        " of integers/floats")
 
     new_matrix = [x[:] for x in matrix]
 
@@ -39,7 +39,7 @@ def matrix_divided(matrix, div):
         for col in range(len(matrix[row])):
             if type(matrix[row][col]) not in [int, float]:
                 raise TypeError("matrix must be a matrix (list of lists)" +
-                                "of integers/floats")
+                                " of integers/floats")
             else:
                 new_element = (matrix[row][col]) / div
                 new_element = round(new_element, 2)
