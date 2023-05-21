@@ -14,9 +14,14 @@ Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
-'string with blank line'
->>> text_indentation("")
-
+'text is a string with severals blankspaces'
+>>> text_indentation("Walter:		White?            hello.")
+Walter:
+<BLANKLINE>
+White?
+<BLANKLINE>
+hello.
+<BLANKLINE>
 
 'missing one arg'
 >>> text_indentation()
