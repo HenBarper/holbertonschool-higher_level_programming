@@ -39,3 +39,15 @@ class TestMaxInteger(unittest.TestCase):
         test_list = [-99, -12, -55, -2, -9]
         self.assertEqual(max_integer(test_list), -2)
 
+
+    def test_only_one_element(self):
+        """Only one element"""
+        test_list = [99]
+        self.assertEqual(max_integer(test_list), 99)
+
+
+    def test_empty_list(self):
+        """empty list"""
+        test_list = []
+        self.assertEqual(max_integer(test_list), None)
+
