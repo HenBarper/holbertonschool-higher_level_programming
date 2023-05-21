@@ -16,8 +16,14 @@ def text_indentation(text):
     Return:
         No return only print
     """
+    new_line = False
+
     for char in text:
-        print(char, end='')
+        if char != ' ' or new_line == False:
+            print(char, end='')
+        else:
+            new_line = False
         if char in ['.', '?', ':']:
             print()
             print()
+            new_line = True
