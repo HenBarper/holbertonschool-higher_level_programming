@@ -57,8 +57,8 @@ class Rectangle:
         self.width = width
         self.height = height
         """
-        self.height = height
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -170,4 +170,3 @@ class Rectangle:
     def square(cls, size=0):
         """Returns a new square of size 'size'"""
         return cls(size, size)
-
