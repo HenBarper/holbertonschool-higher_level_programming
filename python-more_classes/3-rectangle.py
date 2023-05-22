@@ -16,7 +16,7 @@ Instantiation = def __init__(self, width=0, height=0):
 def area(self): that returns the rectangle area
 def perimeter(self): that returns the rectangle perimeter:
 if width or height is equal to 0, perimeter is equal to 0
-print() and str() should print the rectangle with the character #: (see example below)
+print() and str() should print the rectangle with the character #:
 if width or height is equal to 0, return an empty string
 """
 
@@ -113,7 +113,7 @@ class Rectangle:
             for row in range(self.height):
                 for col in range(self.width):
                     string += '#'
-                if row < self.height -1:
+                if row < self.height - 1:
                     string += '\n'
             return string
         else:
