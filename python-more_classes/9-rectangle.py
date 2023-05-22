@@ -37,6 +37,8 @@ rect_1 must be an instance of Rectangle, otherwise raise a TypeError
 rect_2 must be an instance of Rectangle, otherwise raise a TypeError
     exception with the message rect_2 must be an instance of Rectangle
 Returns rect_1 if both have the same area value
+Class method def square(cls, size=0): that returns a new Rectangle
+    instance with width == height == size
 """
 
 
@@ -163,3 +165,9 @@ class Rectangle:
             return rect_1
         elif area_1 < area_2:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """Returns a new square of size 'size'"""
+        return cls(size, size)
+
