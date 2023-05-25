@@ -11,5 +11,5 @@ class LockedClass:
 
         if not hasattr(self, attr) and attr != 'first_name':
             raise AttributeError("'LockedClass' object has \
-                no attribute '{}'".format(attr))
+no attribute '{}'".format(attr))
         super().__setattr__(attr, value)
