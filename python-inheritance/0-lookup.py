@@ -9,4 +9,5 @@ You are not allowed to import any module
 """
 
 def lookup(obj):
+    """Lookup functions returns a list casted dir() of the object"""
     return list(dir(obj))
