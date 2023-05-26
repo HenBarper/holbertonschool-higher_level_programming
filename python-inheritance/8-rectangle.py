@@ -9,9 +9,9 @@ width and height must be positive integers, validated by integer_validator
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class!"""
+    """This is a Rectangle class!"""
     def __init__(self, width, height):
-        """Initialization Method"""
+        """This is the Initialization Method"""
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.width = __width
