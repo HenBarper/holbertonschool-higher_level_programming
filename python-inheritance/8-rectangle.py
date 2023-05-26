@@ -9,6 +9,7 @@ width and height must be positive integers, validated by integer_validator
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     This is a Rectangle class!
