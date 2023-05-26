@@ -1,0 +1,9 @@
+'Test for 1-my_list.py'
+
+'Function to test:   print_sorted()'
+
+>>> print_sorted = __import__('1-my_list').print_sorted
+
+'two strings'
+>>> say_my_name("John", "Smith")
+My name is John Smith
