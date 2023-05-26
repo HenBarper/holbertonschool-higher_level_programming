@@ -16,3 +16,11 @@
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+
+'A list of strings'
+>>> my_list = MyList()
+>>> my_list.append('I')
+>>> my_list.append('Like')
+>>> my_list.append('Peanut Butter')
+>>> my_list.print_sorted()
+['I', 'Like', 'Peanut Butter']
