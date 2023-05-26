@@ -11,3 +11,8 @@
 >>> my_list.append(6)
 >>> my_list.print_sorted()
 [2, 6, 12]
+
+'Empty list'
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
