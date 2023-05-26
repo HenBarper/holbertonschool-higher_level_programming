@@ -1,0 +1,9 @@
+'Test for 7-base_geometry.py'
+
+'Function to test:   integer_validator()'
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+'string and int'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
