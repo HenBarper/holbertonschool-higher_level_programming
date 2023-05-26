@@ -2,8 +2,12 @@
 
 'Function to test:   print_sorted()'
 
->>> print_sorted = __import__('1-my_list').print_sorted
+>>> MyList = __import__("1-my_list").MyList
 
-'two strings'
->>> say_my_name("John", "Smith")
-My name is John Smith
+'A list of numbers'
+>>> my_list = MyList()
+>>> my_list.append(12)
+>>> my_list.append(2)
+>>> my_list.append(6)
+>>> my_list.print_sorted()
+[2, 6, 12]
