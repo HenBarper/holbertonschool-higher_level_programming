@@ -11,4 +11,5 @@ You are not allowed to import any module
 
 
 def inherits_from(obj, a_class):
+    """returns true if obj is instance of parent classes"""
     return isinstance(obj, a_class) and type(obj) is not a_class
