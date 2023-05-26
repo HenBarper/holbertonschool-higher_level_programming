@@ -6,4 +6,5 @@ You are not allowed to import any module
 """
 
 class BaseGeometry:
+    """Empty class"""
     pass
