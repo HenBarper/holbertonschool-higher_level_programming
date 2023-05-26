@@ -14,3 +14,10 @@
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
+'integer_validator()'
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
