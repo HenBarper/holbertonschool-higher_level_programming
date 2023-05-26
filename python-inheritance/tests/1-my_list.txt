@@ -16,3 +16,8 @@
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+
+'__str__'
+>>> s = __import__("1-my_list").MyList.print_sorted.__str__
+>>> len(s) > 1
+True
