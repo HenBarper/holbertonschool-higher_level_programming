@@ -7,11 +7,15 @@ width and height must be private. No getter or setter
 width and height must be positive integers, validated by integer_validator
 """
 
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
-    """This is a Rectangle class!"""
+    """
+    This is a Rectangle class!
+    """
     def __init__(self, width, height):
-        """This is the Initialization Method"""
+        """
+        This is the Initialization Method"""
         super().integer_validator("width", width)
         super().integer_validator("height", height)
         self.width = __width
