@@ -14,7 +14,7 @@ You are not allowed to import any module
 
 
 def append_write(filename="", text=""):
-    """"""
+    """Function to append text to a file"""
     with open(filename, 'a', encoding='utf-8') as appendfile:
         counter = 0
         for char in text:
