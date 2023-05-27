@@ -13,4 +13,4 @@ def read_file(filename=""):
     """Functions to read and print a file"""
     with open(filename, 'r', encoding='utf-8') as readfile:
         text = readfile.read()
-        print(text)
+        print(text, end='')
