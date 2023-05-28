@@ -15,4 +15,4 @@ def load_from_json_file(filename):
     """function to create an obj from a json file"""
     with open(filename, 'r', encoding='utf-8') as readfile:
         text = readfile.read()
-        return json.dumps(text)
+        return json.loads(text)
