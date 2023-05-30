@@ -30,7 +30,7 @@ class Student():
 
         attributes = self.__dict__
 
-        if(attrs == None):
+        if attrs in None
             return attributes
 
         for attr, value in attributes.items():
