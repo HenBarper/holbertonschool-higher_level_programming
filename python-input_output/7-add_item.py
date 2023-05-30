@@ -17,14 +17,16 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-def load_add_save():
-    """Function to add arguments to file"""
-    try:
+try:
         existing_data = load_from_json_file('add_item.json')
-    except:
-        existing_data = []
+except:
+    existing_data = []
 
-    new_items = sys.argv[1:]
-    updated_data = existing_data + new_items
+# new_items = sys.argv[1:]
+# updated_data = existing_data + new_items
 
-    save_to_json_file(updated_data, 'add_item.json')
+for i in range(1, len(sys.argv)):
+    existing_data.append(sys.argv[i])
+
+# save_to_json_file(updated_data, 'add_item.json')
+save_to_json_file(existing_data, 'add_item.json')
