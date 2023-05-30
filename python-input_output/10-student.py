@@ -26,11 +26,12 @@ class Student():
         self.age = age
 
     def to_json(self, attrs=None):
+        """func to make it json!"""
         dict_desc = {}
 
         attributes = self.__dict__
 
-        if attrs in None
+        if attrs in None:
             return attributes
 
         for attr, value in attributes.items():
