@@ -22,11 +22,11 @@ try:
 except:
     existing_data = []
 
-# new_items = sys.argv[1:]
-# updated_data = existing_data + new_items
+new_items = sys.argv[1:]
+updated_data = existing_data + new_items
 
-for i in range(1, len(sys.argv)):
-    existing_data.append(sys.argv[i])
+# for i in range(1, len(sys.argv)):
+#     existing_data.append(sys.argv[i])
 
-# save_to_json_file(updated_data, 'add_item.json')
-save_to_json_file(existing_data, 'add_item.json')
+save_to_json_file(updated_data, 'add_item.json')
+# save_to_json_file(existing_data, 'add_item.json')
