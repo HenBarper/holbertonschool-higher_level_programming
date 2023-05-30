@@ -14,15 +14,14 @@ You are not allowed to import any module
 
 def pascal_triangle(n):
     """func to return list of lists for n in pascals triangle"""
-    pascal = []
-    triangle = []
+    temp_list = []
+    final_list = []
 
-    for i in range(int(n)):
-        new = pascal[:]
-        new.append(1)
-        pos = len(pascal)
-        for i in range(1, pos):
-            new[i] = pascal[i - 1] + pascal[i]
-        pascal = new[:]
-        triangle.append(pascal)
-    return triangle
+    for i in range(n):
+        new_list = temp_list[:]
+        new_list.append(1)
+        for i in range(1, len(temp_list)):
+            new_list[i] = temp_list[i - 1] + temp_list[i]
+        temp_list = new_list[:]
+        final_list.append(temp_list)
+    return final_list
