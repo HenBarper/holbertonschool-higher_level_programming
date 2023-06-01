@@ -104,5 +104,5 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """This function overwrites __str__"""
+        """This function overwrites __str__ of base"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
