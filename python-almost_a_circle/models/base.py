@@ -10,6 +10,7 @@ if id is not None, assign the public instance attribute
 otherwise, increment __nb_objects and assign the new
     value to the public instance attribute id
 """
+import json
 
 
 class Base():
@@ -25,6 +26,7 @@ class Base():
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """Func to make into json file"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
