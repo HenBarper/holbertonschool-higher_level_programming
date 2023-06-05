@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Unittest for class Base()
+"""
+Unittesting time is now
 """
 import unittest
 from models.base import Base
@@ -9,7 +10,8 @@ class TestBase(unittest.TestCase):
     """
     class for testing Base class
     """
-    def test_max_integer(self):
+    def auto_id_assign(self):
         """Auto assign ID exists"""
         b1 = Base()
-        self.assertEqual(b1.id, 1)
+        the_id = b1.id
+        self.assertEqual(the_id, 1)
