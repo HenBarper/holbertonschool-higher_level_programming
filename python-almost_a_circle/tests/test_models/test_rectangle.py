@@ -10,8 +10,13 @@ class TestRectangle(unittest.TestCase):
     """
     class for testing Rectangle class
     """
-    def test_valid_attributes(self):
-        '''test valid attribute values'''
+    def test_valid_attributes_2(self):
+        '''test valid attribute values x2'''
+        rectangle = Rectangle(10, 99)
+        self.assertEqual(rectangle.width, 10)
+        self.assertEqual(rectangle.height, 99)
+    def test_valid_attributes_4(self):
+        '''test valid attribute values x4'''
         rectangle = Rectangle(10, 20, 5, 5)
         self.assertEqual(rectangle.width, 10)
         self.assertEqual(rectangle.height, 20)
