@@ -10,8 +10,7 @@ class TestBase(unittest.TestCase):
     """
     class for testing Base class
     """
-    def auto_id_assign(self):
+    def test_auto_id_assign(self):
         """Auto assign ID exists"""
         b1 = Base()
-        the_id = b1.id
-        self.assertEqual(the_id, 1)
+        self.assertEqual(b1.id, 1)
