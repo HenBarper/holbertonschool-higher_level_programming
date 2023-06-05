@@ -28,5 +28,20 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.x, 2)
         self.assertEqual(square.y, 3)
 
+    def test_invalid_size(self):
+        '''test invalid size values'''
+        with self.assertRaises(TypeError):
+            Square("string")
+
+    def test_invalid_x(self):
+        '''test invalid x values'''
+        with self.assertRaises(TypeError):
+            Square(2, "string")
+
+    def test_invalid_y(self):
+        '''test invalid y values'''
+        with self.assertRaises(TypeError):
+            Square(2, 1, "string")
+
 if __name__ == '__main__':
     unittest.main()
