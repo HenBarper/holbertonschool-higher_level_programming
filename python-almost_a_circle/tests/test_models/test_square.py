@@ -10,10 +10,23 @@ class TestSquare(unittest.TestCase):
     """
     class for testing Rectangle class
     """
-    def test_valid_attributes_2(self):
+    def test_valid_attributes_1(self):
         '''test valid attribute values x1'''
         square = Square(99)
         self.assertEqual(square.size, 99)
+
+    def test_valid_attributes_2(self):
+        '''test valid attribute values x2'''
+        square = Square(50, 1)
+        self.assertEqual(square.size, 50)
+        self.assertEqual(square.x, 1)
+
+    def test_valid_attributes_3(self):
+        '''test valid attribute values x3'''
+        square = Square(25, 2, 3)
+        self.assertEqual(square.size, 25)
+        self.assertEqual(square.x, 2)
+        self.assertEqual(square.y, 3)
 
 if __name__ == '__main__':
     unittest.main()
