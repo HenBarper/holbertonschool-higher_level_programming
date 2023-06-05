@@ -24,6 +24,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.x, 5)
         self.assertEqual(rectangle.y, 5)
 
+    def test_valid_attributes_5(self):
+        '''test valid attribute values x5'''
+        rectangle = Rectangle(10, 20, 5, 5, 99)
+        self.assertEqual(rectangle.width, 10)
+        self.assertEqual(rectangle.height, 20)
+        self.assertEqual(rectangle.x, 5)
+        self.assertEqual(rectangle.y, 5)
+        self.assertEqual(rectangle.id, 99)
+
     def test_invalid_width(self):
         '''test invalid width values'''
         with self.assertRaises(TypeError):
