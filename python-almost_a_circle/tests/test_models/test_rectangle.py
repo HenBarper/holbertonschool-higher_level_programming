@@ -53,5 +53,10 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(5, 20, 99, "string")
 
+    def test_negative_width(self):
+        '''test negative width'''
+        with self.assertRaises(ValueError):
+            Rectangle(-2, 3)
+
 if __name__ == '__main__':
     unittest.main()
