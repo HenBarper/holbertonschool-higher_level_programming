@@ -44,6 +44,7 @@ class Base():
         with open(filename, "w") as file:
             file.write(cls.to_json_string(json_list))
 
+    @staticmethod
     def from_json_string(json_string):
         """returns list of json string data"""
         if json_string is None or len(json_string) == 0:
