@@ -12,8 +12,8 @@ class TestSquare(unittest.TestCase):
     """
     def test_valid_attributes_2(self):
         '''test valid attribute values x1'''
-        square = Square(10)
-        self.assertEqual(square.size, 10)
+        square = Square(99)
+        self.assertEqual(square.size, 99)
 
 if __name__ == '__main__':
     unittest.main()
