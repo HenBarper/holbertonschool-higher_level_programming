@@ -34,5 +34,15 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(20, "string", 5, 5)
 
+    def test_invalid_x(self):
+        '''test invalid x values'''
+        with self.assertRaises(TypeError):
+            Rectangle(5, 20, "string", 5)
+
+    def test_invalid_y(self):
+        '''test invalid y values'''
+        with self.assertRaises(TypeError):
+            Rectangle(5, 20, 99, "string")
+
 if __name__ == '__main__':
     unittest.main()
