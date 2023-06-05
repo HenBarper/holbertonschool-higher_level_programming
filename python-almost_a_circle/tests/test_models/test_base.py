@@ -13,4 +13,8 @@ class TestBase(unittest.TestCase):
     def test_auto_id_assign(self):
         """Auto assign ID exists"""
         b1 = Base()
+        b2 = Base()
+        b3 = Base(99)
         self.assertEqual(b1.id, 1)
+        self.assertEqual(b2.id, 2)
+        self.assertEqual(b3.id, 99)
