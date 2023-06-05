@@ -28,6 +28,14 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(square.x, 2)
         self.assertEqual(square.y, 3)
 
+    def test_valid_attributes_4(self):
+        '''test valid attribute values x4'''
+        square = Square(25, 2, 3, 99)
+        self.assertEqual(square.size, 25)
+        self.assertEqual(square.x, 2)
+        self.assertEqual(square.y, 3)
+        self.assertEqual(square.id, 99)
+
     def test_invalid_size(self):
         '''test invalid size values'''
         with self.assertRaises(TypeError):
