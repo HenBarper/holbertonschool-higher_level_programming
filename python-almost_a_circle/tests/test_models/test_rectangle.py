@@ -15,6 +15,7 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(10, 99)
         self.assertEqual(rectangle.width, 10)
         self.assertEqual(rectangle.height, 99)
+
     def test_valid_attributes_4(self):
         '''test valid attribute values x4'''
         rectangle = Rectangle(10, 20, 5, 5)
@@ -22,6 +23,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.height, 20)
         self.assertEqual(rectangle.x, 5)
         self.assertEqual(rectangle.y, 5)
+
+    def test_invalid_width(self):
+        '''test invalid width values'''
+        with self.assertRaises(TypeError):
+            Rectangle("string", 20, 5, 5)
+
+    def test_invalid_height(self):
+        '''test invalid height values'''
+        with self.assertRaises(TypeError):
+            Rectangle(20, "string", 5, 5)
 
 if __name__ == '__main__':
     unittest.main()
