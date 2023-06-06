@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Unittesting for rectangle class
+Unittesting for square class
 """
 import unittest
 from models.square import Square
@@ -12,7 +12,7 @@ import json
 
 class TestSquare(unittest.TestCase):
     """
-    class for testing Rectangle class
+    class for testing square class
     """
     def test_valid_attributes_1(self):
         """test valid attribute values x1"""
@@ -133,6 +133,31 @@ class TestSquare(unittest.TestCase):
 
             # Assert that the saved data is an empty list
             self.assertEqual(saved_data, [])
+
+    def test_save_to_file_with_single_square(self):
+        # Create a square instance
+        s1 = Square(5)
+
+        # Patch the open function to capture the file output
+        with patch('builtins.open', create=True) as mock_open:
+            # Call the save_to_file method with a list containing the square
+            Square.save_to_file([s1])
+
+            # Assert that open was called with the correct filename
+            mock_open.assert_called_once_with('Square.json', 'w')
+
+            # Retrieve the write call arguments
+            write_args = mock_open.return_value.__enter__.return_value.write.call_args[0]
+
+            # Convert the JSON string to a dictionary
+            saved_data = json.loads(write_args[0])
+
+            # Assert that the saved data is a list with a single square dictionary
+            self.assertEqual(len(saved_data), 1)
+            self.assertEqual(saved_data[0]['id'], s1.id)
+            self.assertEqual(saved_data[0]['size'], s1.size)
+            self.assertEqual(saved_data[0]['x'], s1.x)
+            self.assertEqual(saved_data[0]['y'], s1.y)
 
 if __name__ == '__main__':
     unittest.main()
