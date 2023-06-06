@@ -4,6 +4,8 @@ Unittesting for rectangle class
 """
 import unittest
 from models.rectangle import Rectangle
+from io import StringIO
+import sys
 
 
 class TestRectangle(unittest.TestCase):
@@ -91,6 +93,20 @@ class TestRectangle(unittest.TestCase):
     def test_str(self):
         r1 = Rectangle(5, 10, 2, 3, 1)
         self.assertEqual(str(r1), "[Rectangle] (1) 2/3 - 5/10")
+
+    def test_display_without_xy(self):
+        r1 = Rectangle(5, 3)
+        
+        # Redirect stdout to capture the output
+        captured_output = StringIO()
+        sys.stdout = captured_output
+
+        r1.display()
+
+        # Restore the original stdout
+        sys.stdout = sys.__stdout__
+
+        self.assertEqual(captured_output.getvalue(), "#####\n#####\n#####\n")
 
 if __name__ == '__main__':
     unittest.main()
