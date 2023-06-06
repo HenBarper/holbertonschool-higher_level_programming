@@ -4,5 +4,5 @@ from models.rectangle import Rectangle
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(0, 5)
-    print(r1)
+    r1 = Rectangle(3, 2)
+    print(r1.area())
