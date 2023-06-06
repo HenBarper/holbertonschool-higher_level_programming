@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ test main """
-from models.rectangle import Rectangle
+from models.square import Square
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(2, 3)
-    Rectangle.save_to_file(r1.to_dictionary())
+    s1 = Square(5, 2, 3, 99)
+    print(s1)

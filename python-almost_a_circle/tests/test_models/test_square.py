@@ -71,5 +71,9 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             Square(0)
 
+    def test_str(self):
+        s1 = Square(5, 2, 3, 99)
+        self.assertEqual(str(s1), "[Square] (99) 2/3 - 5")
+
 if __name__ == '__main__':
     unittest.main()
