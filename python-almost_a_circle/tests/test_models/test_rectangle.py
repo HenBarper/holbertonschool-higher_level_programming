@@ -122,5 +122,10 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(captured_output.getvalue(), "\n\n  #####\n  #####\n  #####\n")
 
+    def test_to_dict(self):
+        r1 = Rectangle(2, 3, 1, 1, 99)
+
+        self.assertEqual(r1.to_dictionary(), {'id': 99, 'width': 2, 'height': 3, 'x': 1, 'y': 1})
+
 if __name__ == '__main__':
     unittest.main()
