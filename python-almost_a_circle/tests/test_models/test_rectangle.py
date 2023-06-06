@@ -166,7 +166,7 @@ class TestRectangle(unittest.TestCase):
         # Patch the open function to capture the file output
         with patch('builtins.open', create=True) as mock_open:
             # Call the save_to_file method with None
-            Rectangle.save_to_file(None)
+            Rectangle.save_to_file([])
 
             # Assert that open was called with the correct filename
             mock_open.assert_called_once_with('Rectangle.json', 'w')
