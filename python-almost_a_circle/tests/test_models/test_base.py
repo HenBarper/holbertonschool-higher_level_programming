@@ -4,6 +4,8 @@ Unittesting time is now
 """
 import unittest
 from models.base import Base
+from unittest.mock import patch
+from io import StringIO
 
 
 class TestBase(unittest.TestCase):
@@ -29,6 +31,13 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             b1 = Base()
             json_dictionary = Base.to_json_string()
+
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_to_json_string_with_none(self, mock_stdout):
+        expected_output = "[]"
+        result = Base.to_json_string(None)
+        self.assertEqual(result, expected_output)
+        self.assertEqual(mock_stdout.getvalue(), "")
 
 if __name__ == '__main__':
     unittest.main()
