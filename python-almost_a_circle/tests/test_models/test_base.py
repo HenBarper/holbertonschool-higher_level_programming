@@ -39,5 +39,12 @@ class TestBase(unittest.TestCase):
         self.assertEqual(result, expected_output)
         self.assertEqual(mock_stdout.getvalue(), "")
 
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_from_json_string_with_none(self, mock_stdout):
+        expected_output = []
+        result = Base.from_json_string(None)
+        self.assertEqual(result, expected_output)
+        self.assertEqual(mock_stdout.getvalue(), "")
+
 if __name__ == '__main__':
     unittest.main()
