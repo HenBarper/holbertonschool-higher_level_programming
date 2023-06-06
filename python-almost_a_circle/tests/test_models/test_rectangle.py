@@ -68,5 +68,20 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(0, 3)
 
+    def test_zero_height(self):
+        """test zero height"""
+        with self.assertRaises(ValueError):
+            Rectangle(5, 0)
+
+    def test_negative_x(self):
+        """test negative x"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, 5, -2, 3)
+
+    def test_negative_y(self):
+        """test negative y"""
+        with self.assertRaises(ValueError):
+            Rectangle(1, 5, 2, -6)
+
 if __name__ == '__main__':
     unittest.main()
