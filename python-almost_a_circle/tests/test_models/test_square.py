@@ -159,5 +159,19 @@ class TestSquare(unittest.TestCase):
             self.assertEqual(saved_data[0]['x'], s1.x)
             self.assertEqual(saved_data[0]['y'], s1.y)
 
+    @patch('builtins.open', new_callable=MagicMock)
+    def test_load_from_file_file_not_found(self, mock_open):
+        mock_open.side_effect = FileNotFoundError
+        mock_open.return_value.__enter__.return_value.read.return_value = ""
+
+        # Call the load_from_file method
+        result = Square.load_from_file()
+
+        # Assert that open was called with the correct filename
+        mock_open.assert_called_once_with('Square.json', 'r', encoding='utf-8')
+
+        # Assert that the result is an empty list
+        self.assertEqual(result, [])
+
 if __name__ == '__main__':
     unittest.main()
