@@ -137,5 +137,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.x, 4)
         self.assertEqual(r1.y, 3)
 
+    def test_create(self):
+        r1 = Rectangle.create(**{'id': 89})
+
+        self.assertEqual(r1.id, 89)
+
 if __name__ == '__main__':
     unittest.main()
