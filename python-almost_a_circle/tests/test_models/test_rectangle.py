@@ -6,7 +6,7 @@ import unittest
 from models.rectangle import Rectangle
 from io import StringIO
 import sys
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 import json
 
 
@@ -205,6 +205,20 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(saved_data[0]['height'], r1.height)
             self.assertEqual(saved_data[0]['x'], r1.x)
             self.assertEqual(saved_data[0]['y'], r1.y)
+
+    @patch('builtins.open', new_callable=MagicMock)
+    def test_load_from_file_file_not_found(self, mock_open):
+        mock_open.side_effect = FileNotFoundError
+        mock_open.return_value.__enter__.return_value.read.return_value = ""
+
+        # Call the load_from_file method
+        result = Rectangle.load_from_file()
+
+        # Assert that open was called with the correct filename
+        mock_open.assert_called_once_with('Rectangle.json', 'r', encoding='utf-8')
+
+        # Assert that the result is an empty list
+        self.assertEqual(result, [])
 
 
 if __name__ == '__main__':
