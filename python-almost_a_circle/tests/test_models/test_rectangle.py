@@ -39,29 +39,34 @@ class TestRectangle(unittest.TestCase):
             Rectangle("string", 20, 5, 5)
 
     def test_invalid_height(self):
-        '''test invalid height values'''
+        """test invalid height values"""
         with self.assertRaises(TypeError):
             Rectangle(20, "string", 5, 5)
 
     def test_invalid_x(self):
-        '''test invalid x values'''
+        """test invalid x values"""
         with self.assertRaises(TypeError):
             Rectangle(5, 20, "string", 5)
 
     def test_invalid_y(self):
-        '''test invalid y values'''
+        """test invalid y values"""
         with self.assertRaises(TypeError):
             Rectangle(5, 20, 99, "string")
 
     def test_negative_width(self):
-        '''test negative width'''
+        """test negative width"""
         with self.assertRaises(ValueError):
             Rectangle(-2, 3)
 
     def test_negative_height(self):
-        '''test negative height'''
+        """test negative height"""
         with self.assertRaises(ValueError):
             Rectangle(2, -3)
+
+    def test_zero_width(self):
+        """test zero width"""
+        with self.assertRaises(ValueError):
+            Rectangle(0, 3)
 
 if __name__ == '__main__':
     unittest.main()
