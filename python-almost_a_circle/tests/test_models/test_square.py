@@ -116,5 +116,23 @@ class TestSquare(unittest.TestCase):
             # Assert that the saved data is an empty list
             self.assertEqual(saved_data, [])
 
+    def test_save_to_file_with_empty_brackets(self):
+        # Patch the open function to capture the file output
+        with patch('builtins.open', create=True) as mock_open:
+            # Call the save_to_file method with None
+            Square.save_to_file([])
+
+            # Assert that open was called with the correct filename
+            mock_open.assert_called_once_with('Square.json', 'w')
+
+            # Retrieve the write call arguments
+            write_args = mock_open.return_value.__enter__.return_value.write.call_args[0]
+
+            # Convert the JSON string to a dictionary
+            saved_data = json.loads(write_args[0])
+
+            # Assert that the saved data is an empty list
+            self.assertEqual(saved_data, [])
+
 if __name__ == '__main__':
     unittest.main()
