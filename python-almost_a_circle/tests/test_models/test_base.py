@@ -20,9 +20,15 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b3.id, 99)
 
     def test_id_type(self):
-        '''test the type of id to ensure an integer'''
+        """test the type of id to ensure an integer"""
         base = Base(99)
         self.assertIsInstance(base.id, int)
+
+    def test_to_json_empty(self):
+        """test empty to json"""
+        with self.assertRaises(TypeError):
+            b1 = Base()
+            json_dictionary = Base.to_json_string()
 
 if __name__ == '__main__':
     unittest.main()

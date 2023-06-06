@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ test main """
-from models.rectangle import Rectangle
+from models.base import Base
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(-2, 4)
-    print(r1)
+    b1 = Base()
+    json_dictionary = Base.to_json_string()
