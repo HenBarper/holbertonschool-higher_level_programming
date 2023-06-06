@@ -75,5 +75,10 @@ class TestSquare(unittest.TestCase):
         s1 = Square(5, 2, 3, 99)
         self.assertEqual(str(s1), "[Square] (99) 2/3 - 5")
 
+    def test_to_dict(self):
+        s1 = Square(2, 1, 1, 99)
+
+        self.assertEqual(s1.to_dictionary(), {'id': 99, 'size': 2, 'x': 1, 'y': 1})
+
 if __name__ == '__main__':
     unittest.main()
