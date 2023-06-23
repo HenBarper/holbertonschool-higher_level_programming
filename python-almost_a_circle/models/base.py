@@ -23,8 +23,20 @@ class Base():
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects += 1
+            #Base.__nb_objects += 1
             self.id = Base.__nb_objects
+        #Base.__nb_objects += 1
+        Base.add_base()
+
+    @classmethod
+    def add_base(cls):
+        """class method"""
+        Base.__nb_objects += 1
+
+    @classmethod
+    def num_obj(cls):
+        """Property width to retrieve it"""
+        return cls.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
