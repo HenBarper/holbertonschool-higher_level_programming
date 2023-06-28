@@ -14,7 +14,7 @@ def list_N_states():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE '%N%O%' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' AND name REGEXP '^[N]' ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
