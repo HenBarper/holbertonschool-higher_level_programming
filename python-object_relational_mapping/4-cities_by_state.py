@@ -13,7 +13,7 @@ def list_cities():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM cities ORDER BY id")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities LEFT JOIN states ON states.id = cities.state_id ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
