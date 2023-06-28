@@ -19,6 +19,11 @@ def list_cities_by_state():
     cur.execute(sql_com, (sys.argv[4],))
 
     rows = cur.fetchall()
+
+    if len(rows) == 0:
+        print()
+        return
+
     for i in range(len(rows) - 1):
         print(rows[i][0], end=', ')
     print(rows[len(rows) - 1][0])
