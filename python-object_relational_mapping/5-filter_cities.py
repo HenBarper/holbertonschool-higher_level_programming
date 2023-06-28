@@ -15,7 +15,9 @@ def list_cities_by_state():
 
     cur = db.cursor()
 
-    sql_com = "SELECT cities.name FROM cities JOIN states ON states.id = cities.state_id WHERE states.name = %s ORDER BY cities.id"
+    sql_com = "SELECT cities.name FROM cities JOIN states\
+                ON states.id = cities.state_id WHERE states.name\
+                = %s ORDER BY cities.id"
     cur.execute(sql_com, (sys.argv[4],))
 
     rows = cur.fetchall()
