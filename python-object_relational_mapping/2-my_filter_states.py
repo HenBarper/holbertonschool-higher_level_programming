@@ -15,8 +15,8 @@ def list_states_by_name():
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE binary'{}' ORDER BY id"
-                .format(sys.argv[4]))
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY\
+                 '{}' ORDER BY id".format(sys.argv[4]))
     rows = cur.fetchall()
     for row in rows:
         print(row)
