@@ -18,10 +18,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state_name = sys.argv[4]
-    state = session.query(State).filter(State.name == state_name).first()
+    state_name = State(name="Lousiana")
+    session.add(state_name)
+    session.commit()
 
-    if state is None:
-        print("Not found")
-    else:
-        print(state.id)
+    print(state_name.id)
