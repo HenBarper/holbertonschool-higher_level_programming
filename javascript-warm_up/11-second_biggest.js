@@ -10,13 +10,13 @@ if (ARGV[2] === undefined) {
   console.log(0);
 } else {
   for (counter = 2; counter < ARGV.length; counter++) {
-    if (ARGV[counter] > bigNum) {
-      bigNum = ARGV[counter];
+    if (parseInt(ARGV[counter]) > bigNum) {
+      bigNum = parseInt(ARGV[counter]);
     }
   }
   for (counter = 2; counter < ARGV.length; counter++) {
-    if (ARGV[counter] > secondBig && ARGV[counter] < bigNum) {
-      secondBig = ARGV[counter];
+    if (parseInt(ARGV[counter]) > secondBig && ARGV[counter] < bigNum) {
+      secondBig = parseInt(ARGV[counter]);
     }
   }
   console.log(secondBig);
