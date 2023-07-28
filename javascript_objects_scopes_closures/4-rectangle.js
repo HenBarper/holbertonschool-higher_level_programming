@@ -8,14 +8,9 @@ class Rectangle {
   }
 
   print () {
-    let xCounter;
     let yCounter;
-    let output = '';
-    for (xCounter = 0; xCounter < this.width; xCounter++) {
-      output += 'X';
-    }
     for (yCounter = 0; yCounter < this.height; yCounter++) {
-      console.log(output);
+      console.log('X'.repeat(this.width));
     }
   }
 
