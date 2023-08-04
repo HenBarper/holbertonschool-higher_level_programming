@@ -5,7 +5,7 @@ const modifiedUrl = url.slice(0, -5);
 const finalUrl = modifiedUrl + "people/18";
 console.log(finalUrl);
 
-request.get(url, (err, response, body) => {
+request.get(finalUrl, (err, response, body) => {
   if (err) {
     console.log(err);
   }
