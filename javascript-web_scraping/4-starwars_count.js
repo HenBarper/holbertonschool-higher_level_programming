@@ -12,7 +12,7 @@ request.get(url, (err, response, body) => {
 
   if (response.statusCode === 200) {
     const data = JSON.parse(body);
-    console.log(data.films.length);
+    console.log((data.films).length);
   } else {
     console.error('Request failed with status:', response.statusCode);
   }
