@@ -3,7 +3,7 @@ const request = require('request');
 const url = process.argv[2];
 let counter = 0;
 const dictionary = {};
-let user = 1;
+let user = 0;
 
 request.get(url, (err, response, body) => {
   if (err) {
@@ -14,11 +14,6 @@ request.get(url, (err, response, body) => {
     const data = JSON.parse(body);
     for (const task of data) {
       if (user !== task.userId) {
-        if (user in dictionary) {
-          dictionary[user] += counter;
-        } else {
-          dictionary[user] = counter;
-        }
         user = task.userId;
         counter = 0;
       }
