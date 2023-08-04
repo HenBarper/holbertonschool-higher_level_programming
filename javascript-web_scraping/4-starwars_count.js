@@ -1,7 +1,9 @@
 #!/usr/bin/node
 const request = require('request');
-const url = process.argv[2] + "/18";
-console.log(url);
+const url = process.argv[2];
+const modifiedUrl = url.slice(0, -5);
+const finalUrl = modifiedUrl + "people/18";
+console.log(finalUrl);
 
 request.get(url, (err, response, body) => {
   if (err) {
