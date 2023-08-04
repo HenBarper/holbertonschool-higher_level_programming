@@ -2,7 +2,7 @@
 const request = require('request');
 const url = process.argv[2];
 const modifiedUrl = url.slice(0, -5);
-const finalUrl = modifiedUrl + "people/18";
+const finalUrl = modifiedUrl + 'people/18';
 // console.log(finalUrl);
 
 request.get(finalUrl, (err, response, body) => {
