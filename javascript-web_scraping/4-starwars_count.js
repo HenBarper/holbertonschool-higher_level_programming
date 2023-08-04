@@ -11,7 +11,7 @@ request.get(url, (err, response, body) => {
   }
 
   if (response.statusCode === 200) {
-    const data = JSON.parse(body);
+    const data = JSON.parse(body).results;
     console.log(data);
     // console.log((data.films).length);
   } else {
