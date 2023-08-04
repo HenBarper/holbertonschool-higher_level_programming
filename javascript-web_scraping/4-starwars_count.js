@@ -11,7 +11,7 @@ request.get(url, (err, response, body) => {
   if (response.statusCode === 200) {
     const data = JSON.parse(body);
     for (const film of data) {
-      for (const character of film) {
+      for (const character of film.characters) {
         if (character.includes('/18/')) {
           counter += 1;
         }
