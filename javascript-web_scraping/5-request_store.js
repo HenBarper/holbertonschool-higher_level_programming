@@ -12,7 +12,7 @@ request.get(url, (err, response, body) => {
   }
 
   if (response.statusCode === 200) {
-    fs.writeFile(fileName, data, 'utf-8', (err) => {
+    fs.writeFile(fileName, body, 'utf-8', (err) => {
       if (err) {
         console.log(err);
       }
